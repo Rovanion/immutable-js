@@ -641,15 +641,15 @@ declare module Immutable {
      */
     mergeIn(
       keyPath: Iterable<any, any>,
-      ...iterables: Iterable<K, V>[]
+      ...values: any[]
     ): Map<K, V>;
     mergeIn(
       keyPath: Array<any>,
-      ...iterables: Iterable<K, V>[]
+      ...values: any[]
     ): Map<K, V>;
     mergeIn(
       keyPath: Array<any>,
-      ...iterables: {[key: string]: V}[]
+      ...values: any[]
     ): Map<string, V>;
 
     /**
@@ -663,15 +663,15 @@ declare module Immutable {
      */
     mergeDeepIn(
       keyPath: Iterable<any, any>,
-      ...iterables: Iterable<K, V>[]
+      ...values: any[]
     ): Map<K, V>;
     mergeDeepIn(
       keyPath: Array<any>,
-      ...iterables: Iterable<K, V>[]
+      ...values: any[]
     ): Map<K, V>;
     mergeDeepIn(
       keyPath: Array<any>,
-      ...iterables: {[key: string]: V}[]
+      ...values: any[]
     ): Map<string, V>;
 
 
