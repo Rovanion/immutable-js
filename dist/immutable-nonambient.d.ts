@@ -1959,10 +1959,18 @@
      *     // Seq { a: 10, b: 20 }
      *
      */
-    map<M>(
-      mapper: (value?: V, key?: K, iter?: /*this*/Iterable<K, V>) => M,
-      context?: any
-    ): /*this*/Iterable<K, M>;
+			map<M>(
+					mapper: (value: V) => M,
+					context?: any
+			): /*this*/Iterable<K, M>;
+			map<M>(
+					mapper: (value: V, key: K) => M,
+					context?: any
+			): /*this*/Iterable<K, M>;
+			map<M>(
+					mapper: (value: V, key: K,  iter: /*this*/Iterable<K, V>) => M,
+					context: any,
+			): /*this*/Iterable<K, M>;
 
     /**
      * Returns a new Iterable of the same type with only the entries for which
