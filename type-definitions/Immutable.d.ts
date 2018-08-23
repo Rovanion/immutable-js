@@ -1980,10 +1980,19 @@ declare module Immutable {
      *     // Seq { b: 2, d: 4 }
      *
      */
-    filter(
-      predicate: (value?: V, key?: K, iter?: /*this*/Iterable<K, V>) => boolean,
-      context?: any
-    ): /*this*/Iterable<K, V>;
+      filter(
+          predicate: (value: V) => boolean,
+          context?: any
+      ): /*this*/Iterable<K, V>;
+      filter(
+          predicate: (value: V, key: K) => boolean,
+          context?: any
+      ): /*this*/Iterable<K, V>;
+      filter(
+          predicate: (value: V, key: K,  iter: /*this*/Iterable<K, V>) => boolean,
+          context: any,
+      ): /*this*/Iterable<K, V>;
+
 
     /**
      * Returns a new Iterable of the same type with only the entries for which
@@ -1993,10 +2002,19 @@ declare module Immutable {
      *     // Seq { a: 1, c: 3 }
      *
      */
-    filterNot(
-      predicate: (value?: V, key?: K, iter?: /*this*/Iterable<K, V>) => boolean,
-      context?: any
-    ): /*this*/Iterable<K, V>;
+      filterNot(
+          predicate: (value: V) => boolean,
+          context?: any
+      ): /*this*/Iterable<K, V>;
+      filterNot(
+          predicate: (value: V, key: K) => boolean,
+          context?: any
+      ): /*this*/Iterable<K, V>;
+      filterNot(
+          predicate: (value: V, key: K,  iter: /*this*/Iterable<K, V>) => boolean,
+          context: any,
+      ): /*this*/Iterable<K, V>;
+
 
     /**
      * Returns a new Iterable of the same type in reverse order.
